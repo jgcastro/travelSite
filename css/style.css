@@ -10,6 +10,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -53,6 +54,9 @@ h5 {
 
 .main-head {
   background: #131c27;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
 }
 
 nav {
@@ -178,13 +182,13 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 5rem;
   color: white;
   text-shadow: 3px 3px 8px #000;
 }
 
 .benefits-head {
   padding: 1rem;
+  padding-top: 13rem;
 }
 
 .cards {
@@ -220,6 +224,91 @@ nav ul li a:hover {
   padding: 1.5rem;
 }
 
+/* CONTACT SECTION */
+
+#contact {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url(../img/contact-mountain.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 60%;
+  background-color: rgba(19, 28, 39, 0.8);
+  border-radius: 2rem;
+  color: white;
+}
+
+.form-head {
+  text-align: center;
+  padding: 4rem;
+}
+
+.name-form,
+.email-form {
+  padding: 2rem;
+  text-align: center;
+}
+
+.form-wrapper label {
+  margin: 0rem 2rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  border: none;
+  background-color: teal;
+  color: white;
+  padding: 1rem 2rem;
+  margin-top: 5rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.form-wrapper button:hover {
+  background-color: red;
+  font-weight: bold;
+}
+
+.form-wrapper input {
+  padding: 1rem 2rem;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  background: #343c44;
+  padding: 5rem;
+  color: white;
+  text-shadow: 3px 3px 8px #000;
+}
+
+.footer-wrapper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.footer-wrapper li {
+  padding: 4rem;
+}
+
 /* MEDIA QUERY */
 
 @media screen and (max-width: 932px) {
@@ -251,5 +340,9 @@ nav ul li a:hover {
 
   .moving-cloud-2 {
     z-index: -2;
+  }
+
+  .footer {
+    text-align: center;
   }
 }
